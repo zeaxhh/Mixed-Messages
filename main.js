@@ -8,15 +8,17 @@ const foodGroups = {
 };
 
 //picks a random number between 1-4 to use to index arrays and choose random element
-let index = Math.floor(Math.random() * 4);
 
 //uses template literal to combine 3 pieces of message into one, with optional 'name' feature.
 let healthyMeal = (arg) => {
+    let index1 = Math.floor(Math.random() * 4);
+    let index2 = Math.floor(Math.random() * 4)
+    let index3 = Math.floor(Math.random() * 4)
     let name = arg;
     if(arg === undefined){
         name = 'friend';
     };
-    return `Hello, ${name}, your meal will be ${foodGroups.Proteins[index]}, with ${foodGroups.Carbs[index]} and ${foodGroups.Veggies[index]}`;
+    return `Hello, ${name}, your meal will be ${foodGroups.Proteins[index1]}, with ${foodGroups.Carbs[index2]} and ${foodGroups.Veggies[index3]}`;
 };
 
 console.log(healthyMeal());
